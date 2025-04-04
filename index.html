@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Menu</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Rubik+Glitch&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="src/css/menu.css" />
+    </head>
+    <body>
+        <img src="src/img/cursor.png" id="cursor" draggable="false" />
+        <div id="main">
+            <h1 id="heading" onclick="playSound('src/sound/button.mp3');">
+                TrollShot Roulette
+            </h1>
+            <button id="classic" onclick="playSound('src/sound/button.mp3');">
+                Classic
+            </button>
+            <button id="dynamite" onclick="playSound('src/sound/button.mp3');">
+                Dynamite
+            </button>
+            <button id="shop" onclick="playSound('src/sound/button.mp3');">
+                Shop
+            </button>
+            <button
+                id="achievement"
+                onclick="playSound('src/sound/button.mp3');"
+            >
+                Achievement
+            </button>
+            <div id="tvdiv">
+                <img id="tv" src="src/img/tv.png" draggable="false" />
+                <a
+                    id="intva"
+                    href="https://www.youtube.com/channel/UCSKYIhSoxFAZ-iL9IxYHUlA"
+                    target="_blank"
+                    ><img id="intv" src="src/img/youtube.png" draggable="false"
+                /></a>
+            </div>
+            <img
+                id="persimmon"
+                src="src/img/persimmon.png"
+                alt="Persimmon!"
+                draggable="false"
+            />
+            <canvas id="canvas"></canvas>
+            <div id="filter"></div>
+        </div>
+        <script src="src/js/menu.js"></script>
+    </body>
+</html>

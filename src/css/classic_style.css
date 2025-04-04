@@ -1,0 +1,169 @@
+body {
+    overflow: hidden;
+    background-image: url(basement.webp);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+* {
+    cursor: none;
+}
+#cursor {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 30px;
+    z-index: 4;
+    background: url("cursor.png") no-repeat center/contain;
+    filter: blur(1px) brightness(2) drop-shadow(0 0 10px #b22222);
+    opacity: 0.8;
+    box-shadow: 0 0 20px 5px rgba(255, 0, 0, 0.8);
+    transition: 0.1s;
+}
+#score {
+    position: relative;
+    text-align: center;
+    font-size: 35px;
+    top: 25%;
+    color: #ff0000;
+    -webkit-text-stroke: 1px #e0ffff;
+}
+#trolface {
+    position: absolute;
+    top: 30%;
+    left: 20%;
+    height: 350px;
+    width: 350px;
+    transform: scaleX(-1);
+    z-index: 2;
+}
+#revolverTrol {
+    position: absolute;
+    top: 55%;
+    left: 30%;
+    height: 200px;
+    width: 320px;
+    transform: scaleX(-1);
+    z-index: 3;
+}
+#chairTrol {
+    position: absolute;
+    top: 40%;
+    left: 5%;
+    height: 500px;
+    width: 900px;
+    transform: scaleX(-1);
+    z-index: 1;
+}
+#player {
+    position: absolute;
+    top: 25%;
+    left: 60%;
+    height: 350px;
+    width: 350px;
+    z-index: 2;
+}
+#revolverPlay {
+    position: absolute;
+    top: 55%;
+    left: 53%;
+    height: 200px;
+    width: 320px;
+    z-index: 3;
+}
+#chairPlay {
+    position: absolute;
+    top: 40%;
+    left: 45%;
+    height: 500px;
+    width: 900px;
+    z-index: 1;
+}
+#barrel {
+    position: relative;
+    height: 250px;
+    width: 250px;
+    z-index: 3;
+    border-radius: 50%;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+}
+#barrelImg {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+#charge1 {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 54%;
+    left: 49%;
+    transform: translate(-25px, -110px);
+    z-index: 4;
+    background-color: #808080;
+    border-radius: 50%;
+    border: 1px solid #000000;
+}
+#charge2 {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 54%;
+    left: 46%;
+    transform: translate(50px, -70px);
+    z-index: 4;
+    background-color: #808080;
+    border-radius: 50%;
+    border: 1px solid #000000;
+}
+#charge3 {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 50%;
+    left: 46%;
+    transform: translate(50px, 10px);
+    z-index: 4;
+    background-color: #808080;
+    border-radius: 50%;
+    border: 1px solid #000000;
+}
+#charge4 {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 46%;
+    left: 49%;
+    transform: translate(-25px, 60px);
+    z-index: 4;
+    background-color: #808080;
+    border-radius: 50%;
+    border: 1px solid #000000;
+}
+#charge5 {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 50%;
+    left: 53%;
+    transform: translate(-100px, 10px);
+    z-index: 4;
+    background-color: #808080;
+    border-radius: 50%;
+    border: 1px solid #000000;
+}
+#charge6 {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 54%;
+    left: 53%;
+    transform: translate(-100px, -70px);
+    z-index: 4;
+    background-color: #808080;
+    border-radius: 50%;
+    border: 1px solid #000000;
+}
