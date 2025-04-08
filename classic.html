@@ -10,22 +10,38 @@
         <link rel="stylesheet" href="src/css/classic_style.css" />
     </head>
     <body>
-        <b><p id="score">Round: 1; Record: 0</p></b>
-        <img src="src/img/cursor.png" id="cursor" />
-        <img id="trolface" src="src/img/trolface1.png" />
-        <img id="revolverTrol" src="src/img/revolver.png" />
-        <img id="chairTrol" src="src/img/chair.png" />
-        <img id="chairPlay" src="src/img/chair.png" />
-        <img id="player" src="src/img/player1.png" />
-        <img id="revolverPlay" src="src/img/revolver.png" />
-        <div id="barrel">
-            <img id="barrelImg" src="src/img/barrel.png" />
-            <div id="charge1"></div>
-            <div id="charge2"></div>
-            <div id="charge3"></div>
-            <div id="charge4"></div>
-            <div id="charge5"></div>
-            <div id="charge6"></div>
+        <img src="src/img/cursor.png" id="cursor" draggable="false" />
+        <div id="main">
+            <b><p id="score">Round: 1; Record: 0</p></b>
+            <img id="trolface" src="src/img/trolface1.png" draggable="false" />
+            <img
+                id="revolverTrol"
+                src="src/img/revolver.png"
+                draggable="false"
+            />
+            <img id="chairTrol" src="src/img/chair.png" draggable="false" />
+            <img id="chairPlay" src="src/img/chair.png" draggable="false" />
+            <img id="player" src="src/img/player1.png" draggable="false" />
+            <img
+                id="revolverPlay"
+                src="src/img/revolver.png"
+                draggable="false"
+            />
+            <img id="table" src="src/img/table.png" />
+            <div id="barrel">
+                <img
+                    id="barrelImg"
+                    src="src/img/barrel.png"
+                    draggable="false"
+                />
+                <div id="charge1"></div>
+                <div id="charge2"></div>
+                <div id="charge3"></div>
+                <div id="charge4"></div>
+                <div id="charge5"></div>
+                <div id="charge6"></div>
+            </div>
+            <div id="filter"></div>
         </div>
         <script src="src/js/classic_script.js"></script>
     </body>

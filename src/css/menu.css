@@ -72,7 +72,6 @@ body {
 }
 
 #classic,
-#dynamite,
 #achievement,
 #shop {
     font-family: "Audiowide", sans-serif;
@@ -95,7 +94,6 @@ body {
 }
 
 #classic:hover,
-#dynamite:hover,
 #achievement:hover,
 #shop:hover {
     box-shadow: 0 0 20px 8px rgb(255, 255, 255);
@@ -103,7 +101,6 @@ body {
 }
 
 #classic:active,
-#dynamite:active,
 #achievement:active,
 #shop:active {
     background-color: red;

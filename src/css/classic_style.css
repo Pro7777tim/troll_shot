@@ -1,25 +1,50 @@
+@keyframes down {
+    0% {
+        top: 0vh;
+        transform: rotate(0);
+    }
+    100% {
+        top: 100vh;
+        transform: rotate(360deg);
+    }
+}
+#main {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
 body {
     overflow: hidden;
-    background-image: url(basement.webp);
+    background-image: url(../img/basement.webp);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
 }
 * {
     cursor: none;
+    user-select: none;
+    box-sizing: border-box;
 }
 #cursor {
     content: "";
     position: absolute;
     top: 0;
     left: 0;
-    width: 30px;
+    width: 25px;
     z-index: 4;
-    background: url("cursor.png") no-repeat center/contain;
+    background: url(../img/cursor.png) no-repeat center/contain;
     filter: blur(1px) brightness(2) drop-shadow(0 0 10px #b22222);
     opacity: 0.8;
-    box-shadow: 0 0 20px 5px rgba(255, 0, 0, 0.8);
+    filter: drop-shadow(0 0 15px #ff0000) drop-shadow(0 0 15px #ff0000)
+        drop-shadow(0 0 15px #ff0000);
     transition: 0.1s;
+    pointer-events: none;
 }
 #score {
     position: relative;
@@ -28,6 +53,16 @@ body {
     top: 25%;
     color: #ff0000;
     -webkit-text-stroke: 1px #e0ffff;
+}
+#filter {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+    background: rgba(0, 0, 0, 0);
+    pointer-events: none;
 }
 #trolface {
     position: absolute;
@@ -166,4 +201,7 @@ body {
     background-color: #808080;
     border-radius: 50%;
     border: 1px solid #000000;
+}
+#table {
+    position: absolute;
 }
