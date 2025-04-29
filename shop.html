@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Shop</title>
+        <link rel="icon" href="src/img/icon.png" type="image/png" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Rubik+Glitch&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="src/css/shop.css" />
+    </head>
+    <body>
+        <img src="src/img/cursor.png" id="cursor" draggable="false" />
+        <div id="main">
+            <h1 id="heading" onclick="playSound('src/sound/button.mp3');">
+                TadjikShop
+            </h1>
+            <div id="divReck">
+                <img
+                    class="rack"
+                    id="rack"
+                    src="src/img/rack.png"
+                    draggable="false"
+                />
+                <img
+                    class="rack"
+                    id="rack2"
+                    src="src/img/rack2.png"
+                    draggable="false"
+                />
+            </div>
+            <div id="moneyDiv">
+                <img id="moneyImg" src="src/img/money.png" draggable="false" />
+                <p id="moneyTxt">0</p>
+            </div>
+            <button
+                id="exit"
+                onclick="playSound('src/sound/button.mp3'); setTimeout(() => {
+                location.href = 'index.html';
+            }, 1000);"
+            >
+                Exit
+            </button>
+            <canvas id="canvas"></canvas>
+            <canvas id="light"></canvas>
+            <div
+                class="light"
+                style="
+                    left: 50vw;
+                    top: 50vh;
+                    width: 20vw;
+                    height: 20vw;
+                    transform: translate(-50%, -50%);
+                "
+            ></div>
+        </div>
+        <script src="src/js/shop.js"></script>
+    </body>
+</html>

@@ -74,7 +74,7 @@ const ctx = canvas.getContext("2d");
 ctx.fillStyle = "gray";
 let persimmon = parseInt(localStorage.getItem("persimmon")) || 20;
 let money = parseInt(localStorage.getItem("money")) || 0;
-let tension = 1000;
+let tension = parseInt(localStorage.getItem("tension")) || 1000;
 let interference = 100;
 let nowNet = 0;
 

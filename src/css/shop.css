@@ -1,0 +1,211 @@
+@keyframes down {
+    0% {
+        top: 0vh;
+        transform: rotate(0);
+    }
+    100% {
+        top: 100vh;
+        transform: rotate(360deg);
+    }
+}
+* {
+    cursor: none;
+    box-sizing: border-box;
+    user-select: none;
+    transition: 0.1s;
+}
+#main {
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+}
+
+#heading {
+    position: absolute;
+    top: -3vh;
+    text-align: center;
+    font-size: 8vh;
+    color: #0000ff;
+    -webkit-text-stroke: 1px #e0ffff;
+    font-family: "Rubik Glitch", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    z-index: 11;
+    text-shadow: 0 0 20px rgba(0, 0, 255, 0.8);
+    user-select: none;
+}
+
+#cursor {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 25px;
+    z-index: 12;
+    background: url(../img/cursor.png) no-repeat center/contain;
+    filter: blur(1px) brightness(2) drop-shadow(0 0 10px #b22222);
+    opacity: 0.8;
+    filter: drop-shadow(0 0 15px #ff0000) drop-shadow(0 0 15px #ff0000)
+        drop-shadow(0 0 15px #ff0000);
+    transition: 0.1s;
+    pointer-events: none;
+}
+
+body {
+    overflow: hidden;
+    background: url(../img/basement.webp) no-repeat center center fixed;
+    background-size: cover;
+    transition: 0.3s;
+    background-size: 250% 250%;
+}
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+#canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    user-select: none;
+}
+#light {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    pointer-events: none;
+}
+
+.rack {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -45%);
+    z-index: 3;
+    filter: blur(0.5px) brightness(80%) drop-shadow(0 0 10px #808080);
+    width: 30vw;
+    transition: opacity 0.5s ease;
+    opacity: 1;
+}
+#rack2 {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+#moneyDiv {
+    position: fixed;
+    min-width: 10vw;
+    height: 5vw;
+    top: 1vh;
+    left: 1vw;
+    z-index: 11;
+    background-color: #808080;
+    border-radius: 30px;
+    border: 3px solid #696969;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 0.5vw;
+    padding-left: 1vw;
+}
+
+#moneyImg {
+    position: absolute;
+    left: 0%;
+    width: 50%;
+    filter: blur(0.5px) drop-shadow(0 0 5px #ffd700);
+}
+
+#moneyTxt {
+    position: absolute;
+    left: 50%;
+    font-size: 2vw;
+    font-family: "Pixelify Sans", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    color: #ffd700;
+    text-shadow: 0 0 30px rgb(255, 196, 0);
+    -webkit-text-stroke: 1px #ffa500;
+}
+
+#exit {
+    position: absolute;
+    top: 1vh;
+    left: 92vw;
+    width: 7vw;
+    min-height: 3vh;
+    font-size: 1.8vw;
+    -webkit-text-stroke: 0.3px #e0ffff;
+    font-family: "Rubik Glitch", system-ui;
+    font-weight: 400;
+    z-index: 11;
+    color: #ff0000;
+    background-color: #808080;
+    border-radius: 30px;
+    border: 3px solid #696969;
+    text-shadow: 0 0 20px rgba(255, 0, 0, 0.8);
+    transition: 0.3s;
+}
+
+#exit:hover {
+    box-shadow: 0 0 20px 8px rgba(255, 255, 255, 0.5);
+}
+#exit:active {
+    background-color: #fff;
+}
+
+.money {
+    width: 5vw;
+    height: 5vw;
+    position: absolute;
+    top: 0vh;
+    animation: down 3s ease-in-out infinite;
+    z-index: 3;
+}
+.experience {
+    width: 3vw;
+    height: 3vw;
+    position: absolute;
+    top: 0vh;
+    animation: down 3s ease-in-out infinite;
+    z-index: 3;
+}
+
+@media (max-width: 1000px) {
+    .rack {
+        width: 100vw;
+    }
+    #heading {
+        font-size: 4vh;
+    }
+    #moneyDiv {
+        min-width: 20vw;
+        height: 10vw;
+    }
+    #moneyTxt {
+        font-size: 5vw;
+    }
+    #exit {
+        width: 13vw;
+        height: 7vh;
+        font-size: 4vw;
+        left: 85vw;
+    }
+}
+@media (min-width: 700px) and (max-width: 1000px) {
+    .rack {
+        width: 70vw;
+    }
+}
