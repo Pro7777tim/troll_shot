@@ -70,7 +70,9 @@ function switchImage(oldId, newId) {
     const newImg = document.getElementById(newId);
 
     newImg.style.opacity = 1;
-    oldImg.style.opacity = 0;
+    setTimeout(() => {
+        oldImg.style.opacity = 0;
+    }, 500);
 }
 
 const follower = document.getElementById("cursor");
@@ -126,15 +128,36 @@ function drawLight(xPercent, yPercent, radiusPercent) {
     ctx.arc(x, y, radius, 0, Math.PI * 2);
     ctx.fill();
 }
+function drawYellowLight(xPercent, yPercent, radiusPercent) {
+    const x = canvas.width * xPercent;
+    const y = canvas.height * yPercent;
+    const radius = Math.min(canvas.width, canvas.height) * radiusPercent;
+
+    // Створення жовтого градієнту
+    const gradient = ctx.createRadialGradient(x, y, 0, x, y, radius);
+    gradient.addColorStop(0, "rgba(255, 145, 0, 0.1)");
+    gradient.addColorStop(0.4, "rgba(255, 145, 0, 0.05)");
+    gradient.addColorStop(0.7, "rgba(255, 255, 30, 0)");
+    gradient.addColorStop(1, "rgba(255, 255, 0, 0)");
+
+    ctx.fillStyle = gradient;
+    ctx.beginPath();
+    ctx.arc(x, y, radius, 0, Math.PI * 2);
+    ctx.fill();
+}
 
 function draw() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     ctx.fillStyle = "rgba(0, 0, 0, 0.9)";
     ctx.fillRect(0, 0, canvas.width, canvas.height);
     ctx.globalCompositeOperation = "destination-out";
-    drawLight(mouseX / canvas.width, mouseY / canvas.height, 0.15);
+    drawLight(mouseX / canvas.width, mouseY / canvas.height, 0.12);
     staticLights.forEach((light) => drawLight(light.x, light.y, light.radius));
     ctx.globalCompositeOperation = "source-over";
+    drawYellowLight(mouseX / canvas.width, mouseY / canvas.height, 0.12);
+    staticLights.forEach((light) =>
+        drawYellowLight(light.x, light.y, light.radius)
+    );
     requestAnimationFrame(draw);
 }
 
